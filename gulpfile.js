@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const hb = require('gulp-hb');
@@ -39,7 +40,11 @@ function copy() {
     return gulp.src('src/images/**/*').pipe(gulp.dest('dist/images/'));
 }
 
-const defaultTask = gulp.parallel(styles, templates, copy);
+function createCnameFile(callback) {
+    fs.writeFile('dist/CNAME', 'atnartur.dev', callback);
+}
+
+const defaultTask = gulp.parallel(styles, templates, copy, createCnameFile);
 exports.default = defaultTask
 exports.watch = function () {
     const server = http.createServer((request, response) =>
