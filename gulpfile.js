@@ -28,7 +28,8 @@ function templates() {
             .helpers('./src/templates/helpers/*.js')
             .data('./src/data/**/*.{js,yml}')
             .data({
-                year: (new Date()).getFullYear()
+                year: (new Date()).getFullYear(),
+                isProd
             })
         )
         .pipe(rename(path => path.extname = ".html"))
