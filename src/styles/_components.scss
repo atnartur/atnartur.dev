@@ -1,0 +1,59 @@
+table.content-table {
+    width: 100%;
+
+    td {
+        padding: 6px;
+        vertical-align: top;
+        line-height: 1.5;
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.badge {
+    background: $secondary-light;
+    border: 0;
+    padding: 6px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 30px;
+    color: $secondary;
+    font-size: 12px;
+
+    &.active {
+        background: $secondary;
+        color: $secondary-light;
+    }
+}
+
+.cards {
+    .card {
+        padding: 20px;
+        border: 1px solid $secondary-light;
+        border-top-width: 0;
+        cursor: pointer;
+
+        &:first-child {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top-width: 1px;
+        }
+        &:last-child {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &:hover {
+            background: $secondary-light;
+        }
+
+        &.opened {
+            box-shadow: 0 0 2px $secondary;
+        }
+    }
+}

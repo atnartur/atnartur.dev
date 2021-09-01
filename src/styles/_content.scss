@@ -1,0 +1,52 @@
+#content {
+    margin-top: 28px;
+}
+
+#menu {
+    a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+        color: $secondary;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 0 18px 18px 0;
+
+        svg {
+            fill: $secondary;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            background: $secondary-light;
+        }
+
+        &.active {
+            background: $primary;
+            color: white;
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+}
+
+#main {
+    section {
+        margin-bottom: 42px;
+    }
+
+    .section-header {
+        line-height: 1.5;
+        font-size: 24px;
+        color: $primary;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+}
