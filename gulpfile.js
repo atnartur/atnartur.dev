@@ -5,6 +5,7 @@ const livereload = require('gulp-livereload');
 const rename = require("gulp-rename");
 const handler = require('serve-handler');
 const http = require('http');
+const deploy = require('gulp-gh-pages');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -48,4 +49,8 @@ exports.watch = function () {
     gulp.watch('./src/styles/**/*.scss', {}, styles);
     gulp.watch('./src/templates/**/*', {}, templates);
     gulp.watch('./src/images/**/*', {}, copy);
+}
+
+exports.deploy = function () {
+    return gulp.src('./dist/**/*').pipe(deploy());
 }
