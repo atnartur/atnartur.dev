@@ -26,6 +26,9 @@ function templates() {
             .partials('./src/templates/partials/**/*.hbs')
             .helpers('./src/templates/helpers/*.js')
             .data('./src/data/**/*.{js,yml}')
+            .data({
+                year: (new Date()).getFullYear()
+            })
         )
         .pipe(rename(path => path.extname = ".html"))
         .pipe(gulp.dest('./dist'))
