@@ -44,15 +44,25 @@
 
     a {
         text-decoration: none;
+        color: $secondary;
 
         svg {
             fill: $secondary;
         }
 
+        &.text {   
+            font-weight: bold;
+            font-size: 28px;
+        }
+
         &:hover {
+            color: $primary;
+
             svg {
                 fill: $primary;
             }
         }
+
+        
     }
 }

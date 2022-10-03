@@ -1,12 +1,14 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const hb = require('gulp-hb');
 const livereload = require('gulp-livereload');
 const rename = require("gulp-rename");
 const handler = require('serve-handler');
 const http = require('http');
 const deploy = require('gulp-gh-pages');
+const nunjucks = require('gulp-nunjucks');
+const ruData = require('./data/ru.js');
+const enData = require('./data/en.js');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -20,22 +22,26 @@ function styles() {
         .pipe(livereload());
 }
 
-function templates() {
-    return gulp
-        .src('./src/templates/*.hbs')
-        .pipe(hb()
-            .partials('./src/templates/partials/**/*.hbs')
-            .helpers('./src/templates/helpers/*.js')
-            .data('./src/data/**/*.{js,yml}')
-            .data({
-                year: (new Date()).getFullYear(),
-                isProd
-            })
-        )
-        .pipe(rename(path => path.extname = ".html"))
-        .pipe(gulp.dest('./dist'))
-        .pipe(livereload());
+function genericTemplate(langData, resultFile) {
+    return () => {
+        return gulp
+            .src('./src/templates/index.njk')
+            .pipe(
+                nunjucks.compile({
+                    ...langData.default,
+                    year: (new Date()).getFullYear(),
+                    isProd
+                })
+            )
+            .pipe(rename(resultFile))
+            .pipe(gulp.dest('./dist'))
+            .pipe(livereload());
+    }
 }
+
+const templatesRu = genericTemplate(ruData, 'ru.html');
+const templatesEn = genericTemplate(enData, 'index.html');
+const templates = gulp.parallel(templatesEn, templatesRu);
 
 function copy() {
     return gulp.src('src/images/**/*').pipe(gulp.dest('dist/images/'));

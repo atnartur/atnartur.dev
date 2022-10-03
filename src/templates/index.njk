@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ siteTitle }}</title>
+
+    <meta name="description" content="{{siteTitle}}" />
+    <meta name="keywords" content="atnartur.ru, web-developer, web, Artur Atnagulov, Атнагулов Артур, atnartur" />
+
+    <!-- Schema.org markup (Google) -->
+    <meta itemprop="name" content="{{siteTitle}}">
+    <meta itemprop="description" content="{{siteTitle}}">
+    <meta itemprop="image" content="/images/photo.jpeg">
+
+    <!-- Twitter Card markup-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@atnartur">
+    <meta name="twitter:title" content="{{siteTitle}}">
+    <meta name="twitter:description" content="{{siteTitle}}">
+    <meta name="twitter:creator" content="@atnartur">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image" content="/images/photo.jpeg">
+    <meta name="twitter:image:alt" content="{{siteTitle}}">
+
+    <!-- Open Graph markup (Facebook, Pinterest) -->
+    <meta property="og:title" content="{{siteTitle}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://atnartur.dev/" />
+    <meta property="og:image" content="/images/photo.jpeg" />
+    <meta property="og:description" content="{{siteTitle}}" />
+    <meta property="og:site_name" content="{{siteTitle}}" />
+
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header class="container" id="header">
+        <div class="sidebar">
+            <img src="/images/photo.jpg" alt="{{name}}"/>
+        </div>
+        <div class="main">
+            <h1>{{name}}</h1>
+            <h2>{{subheading}}</h2>
+            <div class="social_icons">
+                <a href="https://t.me/atnartur" title="{{writeTelegram}} - @atnartur" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/icons.svg#telegram-plane"></use>
+                    </svg>
+                </a>
+                <a href="mailto:i@atnartur.dev" title="{{writeEmail}} - i@atnartur.dev">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/icons.svg#envelope"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/atnartur" title="Twitter - @atnartur" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/icons.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="https://github.com/atnartur" title="Github - @atnartur" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/icons.svg#github"></use>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/atnartur" title="LinkedIn - @atnartur" target="_blank">
+                    <svg width="30" height="30">
+                        <use xlink:href="/images/icons.svg#linkedin"></use>
+                    </svg>
+                </a>
+                {% if lang == 'ru' %}
+                    <a href="https://hh.ru/resume/d9dd54ebff0b52ac7e0039ed1f46594e465371" title="HeadHunter (russian)" target="_blank" class="text">
+                        hh
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <div class="container d-block">
+        <main id="main">
+            <section>
+                <h2 class="section-header">{{aboutMe}}</h2>
+                {{aboutMeText | safe }}
+            </section>
+
+            <section>
+                <h2 class="section-header">{{work}}</h2>
+                <table class="content-table">
+                    {% for work in workPlaces %}
+                        <tr>
+                            <td class="no-br">
+                            {% if work.link %}
+                                <a href="https://kpfu.ru/itis">
+                            {% endif %}
+                            {{ work.company }}
+                            {% if work.link %}
+                                </a>
+                            {% endif %}
+                            </td>
+                            <td class="no-br text-muted">{{ work.year }}</td>
+                            <td>{{ work.text }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <footer id="footer" class="container d-block">
+        &copy; 2011-{{ year }} <a href="/">atnartur.dev</a>
+        &middot;
+        {% if lang == 'ru' %}
+            <a href="https://atnartur.ru" target="_blank">блог</a>
+            &middot;
+            <a href="/">english version</a>
+        {% else %}
+            <a href="/ru.html">russian version</a>
+        {% endif %}
+        <a href="https://github.com/atnartur/atnartur.dev/" target="_blank" class="float-right">source code</a>
+    </footer>
+
+    {% if isProd %}
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+           ym(84815050, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true
+           });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/84815050" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    {% endif %}
+</body>
+</html>
