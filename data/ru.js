@@ -19,6 +19,12 @@ exports.default = {
 	work: "Работа",
 	workPlaces: [
 		{
+			company: 'EPAM Anywhere',
+			year: 'since 2022',
+			link: 'https://anywhere.epam.com/en',
+			text: 'Senior Software Engineer'
+		},
+		{
 			company: 'ИТИС КФУ',
 			year: 'c 2020',
 			link: 'https://kpfu.ru/itis',

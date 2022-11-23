@@ -20,6 +20,12 @@ exports.default = {
 	work: "Career",
 	workPlaces: [
 		{
+			company: 'EPAM Anywhere',
+			year: 'since 2022',
+			link: 'https://anywhere.epam.com/en',
+			text: 'Senior Software Engineer'
+		},
+		{
 			company: 'Kazan Federal University',
 			year: 'since 2020',
 			link: 'https://kpfu.ru/itis',
