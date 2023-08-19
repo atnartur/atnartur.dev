@@ -7,13 +7,16 @@ exports.default = {
 	writeEmail: 'Написать на почту',
 	aboutMe: 'Обо мне',
 	aboutMeText: `
-		<p>Я в ИТ с 2011 года. Разрабатываю бекенд на Python с использованием Django, Flask и Celery. Ранее использовал Go, PHP, C#, Java и NodeJS.
-		Складываю данные в PostgeSQL, MySQL, Redis и Clickhouse. </p>
-        <p>Создаю интерфейсы с помощью Vue, также знаком с React и Angular.</p>
-        <p>Разворачиваю проекты с помощью Docker, Gitlab CI и Ansible.</p>
+		<p>Разносторонний разработчик с 12-летним опытом работы с backend, frontend и devops. 
+		Мой опыт руководства включает в себя управление Agile-командами до 8 разработчиков.</p>
+
+		<p>Сейчас я использую Python для разработки бекенда, ранее в проектах я работал с Java, NodeJS, PHP, C# и Go. 
+		Имею опыт работы с Vue, Angular и React. Для настройки CI/CD предпочитаю Gitlab CI, Docker, Ansible и Terraform.</p>
+
+		<p>Полное резюме доступно на <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
         <p>
-        	Иногда <a href="https://atnartur.ru" target="_blank">пишу в блог</a> и 
-        	<a href="https://atnartur.ru/learn" target="_blank">выкладывадываю образовательные материалы</a>.
+        	Также я иногда <a href="https://atnartur.ru" target="_blank">пишу в блог</a> и 
+        	<a href="https://atnartur.ru/learn" target="_blank">выкладываю образовательные материалы</a>.
         </p>
 	`,
 	work: "Работа",
@@ -66,5 +69,26 @@ exports.default = {
 			link: 'https://smarthead.ru',
 			text: 'поддержка административной панели существущего проекта в рамках стажировки'
 		},
+	],
+	projects: "Проекты",
+	projectItems: [
+		{
+			title: "UniEnv",
+			text: `хостинг платформа для студенческих веб-приложений. 
+			Первая версия работала на Gitlab CI и Dokku (похожая на Heroku платформа развертывания).
+			Последняя версия запущена на базе Яндекс.Облака с автоматизацией подключения доменов с помощью Terraform.
+			Веб-приложения разработаны на Django & Vue с развертыванием в Docker-контейнерах с помощью Ansible и Gitlab CI.
+			Также в рамках проекта были написаны статьи по развертыванию и смежным практикам.`,
+			year: "с 2020",
+			link: "https://uenv.ru"
+		},
+		{
+			title: "ClienD",
+			text: `электронный дневник в мобильном приложении с улучшенным UX. Ежедневная аудитория достигала 60&nbsp;000 пользователей.
+			Последняя версия была создана с разработкой кроссплатформенной библиотеки Java и ее интеграцией 
+			в приложения Android и iOS. Множество веб-сервисов было разработано на Python, PHP, MySQL and Gitlab CI.`,
+			year: "2013 - 2022",
+			link: "https://cliend.ru"
+		}
 	]
 };

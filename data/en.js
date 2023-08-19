@@ -1,21 +1,21 @@
 exports.default = {
 	lang: 'en',
-	siteTitle: 'Artur Atnagulov - web-developer & teamlead',
+	siteTitle: 'Artur Atnagulov - senior software engineer & teamlead',
 	name: 'Artur Atnagulov',
-	subheading: 'Web-developer & teamlead',
+	subheading: 'Senior software engineer & teamlead',
 	writeTelegram: 'Write to Telegram',
 	writeEmail: 'Write an email',
 	aboutMe: 'About me',
 	aboutMeText: `
-		<p>I'm in IT since 2011 and currently using Python with Django, Flask & Celery for backend development with PostgreSQL, MySQL, 
-		Redis or Clickhouse databases. Also I familiar with Go, PHP (Laravel, Phalcon), C#, Java & NodeJS. I make interfaces with Vue.js & 
-		Nuxt.</p>
+		<p>I am a T-shaped senior software engineer with over 12 years of expertise spanning backend, 
+		frontend, and devops. My leadership experience involves guiding teams of up to 8 developers 
+		in agile environments.</p>
 
-		<p>For organizing DevOps pipelines I prefer Gitlab CI, Docker, Ansible and Terraform. I work with debian-based operating systems 
-		most of the time.</p>
+		<p>While my present technical emphasis lies in Python, my projects history includes 
+		Java, NodeJS, PHP, C#, and Go. In frontend, I am well-versed in Vue, Angular and React frameworks. 
+		For creating CI/CD pipelines, my tools of choice include Gitlab CI, Docker, Ansible, and Terraform.</p>
 
-		<p>I have experience in management teams of up to 8 developers and have soft skills such as responsibility, leadership, 
-		teamwork, conflict resolution.</p>
+		<p>Complete resume is available on <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
 	`,
 	work: "Career",
 	workPlaces: [
@@ -67,5 +67,27 @@ exports.default = {
 			link: 'https://smarthead.ru',
 			text: 'supported existing project\'s admin panel during the internship program'
 		},
+	],
+	projects: "Projects",
+	projectItems: [
+		{
+			title: "UniEnv",
+			text: `is a hosting platform for student developed web applications. 
+            First version was based on Gitlab CI and Dokku, Heroku like platform for building and deploying applications.
+            Latest version is running on Yandex Cloud and automated domains management with Terraform. 
+            Web applications created with Django & Vue with Docker, Ansible & Gitlab CI deployment.
+            Project also includes articles about deployment and related practices.`,
+			year: "since 2020",
+			link: "https://uenv.ru"
+		},
+		{
+			title: "ClienD",
+			text: `is a digital diary mobile application with improved UX experince. 
+			Daily active users was up to 60&nbsp;000. A latest version was created with Java crossplatform 
+			library development and its integration to Android and iOS applications. Numerous of web services were implemented 
+			with Python, PHP, MySQL and Gitlab CI.`,
+			year: "2013 - 2022",
+			link: "https://cliend.ru"
+		}
 	]
 };
