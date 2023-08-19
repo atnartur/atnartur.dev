@@ -15,7 +15,7 @@ exports.default = {
 		Java, NodeJS, PHP, C#, and Go. In frontend, I am well-versed in Vue, Angular and React frameworks. 
 		For creating CI/CD pipelines, my tools of choice include Gitlab CI, Docker, Ansible, and Terraform.</p>
 
-		<p>Complete resume is available on <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
+		<p>Complete CV is available on <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
 	`,
 	work: "Career",
 	workPlaces: [
