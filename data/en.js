@@ -7,15 +7,14 @@ exports.default = {
 	writeEmail: 'Write an email',
 	aboutMe: 'About me',
 	aboutMeText: `
-		<p>As a seasoned senior software engineer, I possess a robust skill set cultivated over 12 years, 
-		characterized by proficiency across backend, frontend, and DevOps domains. My leadership understanding 
-		is demonstrated through successfully guiding agile teams of up to 8 developers, ensuring project 
-		delivery within allocated timeframes and budgets.</p>
+		<p>As an experienced senior software engineer, I possess a robust skill set cultivated over 12 years, 
+		characterized by proficiency across backend, frontend, and DevOps domains. My leadership understanding is 
+		demonstrated through successfully guiding agile teams of up to 8 developers, ensuring project delivery within 
+		allocated timeframes and budgets.</p>
 
-		<p>While my current technical focus centers on Python, my extensive project history encompasses 
-		Java, NodeJS, PHP, C#, and Go. In frontend development, I excel in Vue, Angular, and React frameworks. 
-		Additionally, I am adept at crafting efficient CI/CD pipelines utilizing tools such as Gitlab CI, Docker, 
-		Ansible, and Terraform.</p>
+		<p>While my current technical focus centres on Python, my extensive project history encompasses Java, 
+		NodeJS, PHP, C#, and Go. In frontend development, I excel in Vue, Angular, and React frameworks. Additionally, 
+		I am adept at crafting efficient CI/CD pipelines utilizing tools such as Gitlab CI, Docker, Ansible, and Terraform.</p>
 
 		<p>Complete CV is available on <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
 	`,
@@ -25,7 +24,7 @@ exports.default = {
 			company: 'EPAM Anywhere',
 			year: 'since 2022',
 			link: 'https://anywhere.epam.com/en',
-			text: 'Senior Software Engineer'
+			text: 'Lead Software Engineer'
 		},
 		{
 			company: 'Kazan Federal University',
