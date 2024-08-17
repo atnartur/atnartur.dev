@@ -21,27 +21,20 @@ exports.default = {
 	work: "Career",
 	workPlaces: [
 		{
-			company: 'EPAM Anywhere',
+			company: 'EPAM Systems',
 			year: 'since 2022',
-			link: 'https://anywhere.epam.com/en',
+			link: 'https://epam.com',
 			text: 'Lead Software Engineer'
 		},
 		{
 			company: 'Kazan Federal University',
-			year: 'since 2020',
+			year: '2020-2024',
 			link: 'https://kpfu.ru/itis',
 			text: 'taught web development and DevOps practices in Smart Education Lab of Institute of information technologies and intellectual systems'
 		},
 		{
-			company: 'Releven',
-			year: '2022',
-			link: 'https://releven.co',
-			text: 'developed backend and frontend for english learning platform with Twilio Video and Chatwoot support platform integrations'
-		},
-		{
 			company: 'Fixtender',
 			year: '2021-2022',
-			link: 'https://fixtender.com',
 			text: `developed backend & frontend of construction procurement and tender platform`
 		},
 		{
@@ -50,27 +43,15 @@ exports.default = {
 			link: 'https://stride.one',
 			text: `developed projects on Django + Vue, managed teams up to 8 developers, supported internal services (Gitlab, Sentry, Wiki) & server infrastucture`
 		},
-		{
-			company: 'RVMarket',
-			year: '2014-2016',
-			link: null,
-			text: 'developed backend for 3D visualization software with administration panel'
-		},
-		{
-			company: 'Need4Speak',
-			year: '2015-2016',
-			link: 'https://need4speak.com',
-			text: 'developed CRM system & website for foreign languages school'
-		},
-		{
-			company: 'SmartHead',
-			year: '2014',
-			link: 'https://smarthead.ru',
-			text: 'supported existing project\'s admin panel during the internship program'
-		},
 	],
 	projects: "Projects",
 	projectItems: [
+		{
+			title: "Memix",
+			text: `is an online collaborative game where people select funny memes for the displayed situations and have fun.`,
+			year: "since 2024",
+			link: "https://memix.lol"
+		},
 		{
 			title: "UniEnv",
 			text: `is a hosting platform for student developed web applications. 
@@ -78,7 +59,7 @@ exports.default = {
             Latest version is running on Yandex Cloud and automated domains management with Terraform. 
             Web applications created with Django & Vue with Docker, Ansible & Gitlab CI deployment.
             Project also includes articles about deployment and related practices.`,
-			year: "since 2020",
+			year: "2020 - 2024",
 			link: "https://uenv.ru"
 		},
 		{

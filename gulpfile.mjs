@@ -1,14 +1,17 @@
-const fs = require('fs');
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const livereload = require('gulp-livereload');
-const rename = require("gulp-rename");
-const handler = require('serve-handler');
-const http = require('http');
-const deploy = require('gulp-gh-pages');
-const nunjucks = require('gulp-nunjucks');
-const ruData = require('./data/ru.js');
-const enData = require('./data/en.js');
+import fs from 'fs';
+import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
+import * as sassCompiler from 'sass';
+import livereload from 'gulp-livereload';
+import rename from 'gulp-rename';
+import handler from 'serve-handler';
+import http from 'http';
+import githubPages from 'gulp-gh-pages';
+import {nunjucksCompile as nunjucks} from 'gulp-nunjucks';
+import ruData from './data/ru.js';
+import enData from './data/en.js';
+
+const sass = gulpSass(sassCompiler);
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -27,7 +30,7 @@ function genericTemplate(langData, resultFile) {
         return gulp
             .src('./src/templates/index.njk')
             .pipe(
-                nunjucks.compile({
+                nunjucks({
                     ...langData.default,
                     year: (new Date()).getFullYear(),
                     isProd
@@ -44,16 +47,17 @@ const templatesEn = genericTemplate(enData, 'index.html');
 const templates = gulp.parallel(templatesEn, templatesRu);
 
 function copy() {
-    return gulp.src('src/images/**/*').pipe(gulp.dest('dist/images/'));
+    return gulp.src('src/images/**/*', {encoding: false}).pipe(gulp.dest('dist/images/'));
 }
 
 function createCnameFile(callback) {
     fs.writeFile('dist/CNAME', 'atnartur.dev', callback);
 }
 
-const defaultTask = gulp.parallel(styles, templates, copy, createCnameFile);
-exports.default = defaultTask
-exports.watch = function () {
+const defaultTask = gulp.series(styles, templates, copy, createCnameFile);
+export default defaultTask;
+
+export function watch() {
     const server = http.createServer((request, response) =>
         handler(request, response, {public: 'dist/'})
     )
@@ -66,6 +70,6 @@ exports.watch = function () {
     gulp.watch('./src/images/**/*', {}, copy);
 }
 
-exports.deploy = function () {
-    return gulp.src('./dist/**/*').pipe(deploy());
+export function deploy () {
+    return gulp.src('./dist/**/*').pipe(githubPages());
 }
