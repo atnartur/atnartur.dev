@@ -7,14 +7,14 @@ exports.default = {
 	writeEmail: 'Write an email',
 	aboutMe: 'About me',
 	aboutMeText: `
-		<p>As an experienced senior software engineer, I possess a robust skill set cultivated over 12 years, 
-		characterized by proficiency across backend, frontend, and DevOps domains. My leadership understanding is 
-		demonstrated through successfully guiding agile teams of up to 8 developers, ensuring project delivery within 
-		allocated timeframes and budgets.</p>
-
-		<p>While my current technical focus centres on Python, my extensive project history encompasses Java, 
-		NodeJS, PHP, C#, and Go. In frontend development, I excel in Vue, Angular, and React frameworks. Additionally, 
-		I am adept at crafting efficient CI/CD pipelines utilizing tools such as Gitlab CI, Docker, Ansible, and Terraform.</p>
+		<p>13+ years of software engineering and team management experience in startups and large companies in 
+		life-science, education, construction and e-commerce domains. I’m committed to delivering high-quality 
+		solutions that meet business goals, focusing on clear requirements, timely delivery, and fostering a 
+		collaborative team environment.</p>
+		
+		<p>I have proven T-shaped experience with a main focus on Python backend development (FastAPI, Django) and 
+		expertise in frontend (Vue, Angular, React) and DevOps (Gitlab CI, AWS, Terraform, Angular, Docker) allows me 
+		to approach problems from different angles.</p>
 
 		<p>Complete CV is available on <a href="https://linkedin.com/in/atnartur" target="_blank">LinkedIn</a>.</p>
 	`,
