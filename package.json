@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch",
-    "deploy": "gulp deploy",
-    "build": "NODE_ENV=production gulp"
+    "watch": "npx gulp watch",
+    "deploy": "npx gulp deploy",
+    "build": "NODE_ENV=production npx gulp"
   },
   "author": "",
   "license": "ISC",
