@@ -7,7 +7,7 @@ exports.default = {
 	writeEmail: 'Write an email',
 	aboutMe: 'About me',
 	aboutMeText: `
-		<p>13+ years of software engineering and team management experience in startups and large companies in 
+		<p>14+ years of software engineering and team management experience in startups and large companies in 
 		life-science, education, construction and e-commerce domains. I’m committed to delivering high-quality 
 		solutions that meet business goals, focusing on clear requirements, timely delivery, and fostering a 
 		collaborative team environment.</p>
@@ -21,8 +21,14 @@ exports.default = {
 	work: "Career",
 	workPlaces: [
 		{
+			company: 'EMIS Health',
+			year: 'since 2024',
+			link: 'https://www.emishealth.com/',
+			text: 'Lead DevOps Engineer'
+		},
+		{
 			company: 'EPAM Systems',
-			year: 'since 2022',
+			year: '2022-2024',
 			link: 'https://epam.com',
 			text: 'Lead Software Engineer'
 		},
